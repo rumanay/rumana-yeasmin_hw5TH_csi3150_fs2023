@@ -72,16 +72,13 @@ C:\Desktop\GitHub\quizapp
         </div>
     </div>
 ```
-- Body Section - Start Button
-- <div class="start_btn"><button>Start Quiz</button></div>: Creates a button labeled "Start Quiz" to initiate the quiz.
-Instruction Box
-- <div class="info_box">: Wraps the instruction box for the quiz.
-- <div class="info-title"><span>Some Rules of this Quiz</span></div>: Contains a title for the instruction box.
-- <div class="info-list">: Contains a list of rules for the quiz.
-- Rules are presented within individual <div> elements.
-- <div class="buttons">: Wraps buttons within the instruction box.
-- <button class="quit">Exit Quiz</button>: Allows participants to exit the quiz.
-- <button class="restart">Continue</button>: Allows participants to proceed with the quiz after reading the instructions.
+- `<head>`: This section contains metadata about the HTML document, such as character encoding, viewport settings, and the title of the page.
+
+- `<script src="js/questions.js" defer></script>`: This imports an external JavaScript file named "questions.js" located in the "js" folder. The defer attribute tells the browser to defer executing the script until after the document has been parsed. This is typically used to ensure that scripts do not block the rendering of the page.
+
+- `<link rel="stylesheet" href="css/style.css">`: This links an external CSS file named "style.css" located in the "css" folder. This CSS file likely contains styling rules for the HTML elements in the document.
+
+- `</head>`: This tag marks the end of the `<head>` section.
 
 ```
 <!-- Quiz Box -->
@@ -129,6 +126,17 @@ Instruction Box
 
 </body>
 ```
+* **Class: `start_btn`**
+    - Description: A button element that users can click to start or begin answering questions.
+
+* **Class: `info_box`**
+    - Description: A wrapper containing the rules for answering questions, including a title, a list of rules, and buttons (quit and start).
+
+* **Class: `quiz_box`**
+    - Description: The main answering area, including title, timer, question text, answer options, dynamic statistics questions, and next question button.
+
+* **Class: `result_box`**
+    - Description: Result display area, including a crown icon, completion text, user score text, and restart/exit button.
 1. **`start_btn` Class:**
     - This class represents a button that initiates the quiz or starts the process of answering questions.
 
@@ -156,7 +164,77 @@ Instruction Box
         - Buttons for restarting the quiz or exiting.
 
 
+## styles.css code explanation 
+```
+/* importing google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
 
+body {
+  background: #a020f0;
+}
+
+::selection {
+  color: #fff;
+  background: #a020f0;
+}
+
+.start_btn,
+.info_box,
+.quiz_box,
+.result_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.info_box.activeInfo,
+.quiz_box.activeQuiz,
+.result_box.activeResult {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+```
+### CSS Code Explanation:
+
+#### Importing Google Fonts:
+This section imports the Google Font "Poppins" with multiple weights to be used in the project.
+
+#### Global Styles:
+This section sets global styles for all elements:
+- Resets margin and padding to zero.
+- Ensures that box-sizing is border-box for all elements.
+- Sets the default font family to "Poppins" with a fallback of sans-serif.
+
+#### Body Styles:
+This section sets the background color of the body to a shade of purple.
+
+#### Selection Styles:
+This section styles the text selection with white text on a purple background.
+
+#### Box Styles:
+This section sets the positioning and box-shadow for the main components of the project (start button, info box, quiz box, result box).
+
+#### Active States:
+This section defines the active state styles for info box, quiz box, and result box.
+
+#### Button Styles:
+This section styles the start button with a specific font size, weight, padding, color, background, and border-radius.
+
+#### Info Box Styles:
+This section styles the info box with a specific width, background color, border-radius, initial opacity, and transition effects.
+
+#### Active Info Box Styles:
+This section defines the active state styles for the info box.
 
 
 
