@@ -129,18 +129,20 @@ Instruction Box
 
 </body>
 ```
+
+```
 Quiz Box:
-- <header>: Contains the title of the quiz, timer display, and a time line.
-- <section>: Contains the question text and options list.
-- <div class="que_text">: Placeholder for the question text.
-- <div class="option_list">: Placeholder for the options list.
-- <footer>: Contains the total question count and a button to navigate to the next question.
+ - <header>: Contains the title of the quiz, timer display, and a time line.
+<section>: Contains the question text and options list.
+<div class="que_text">: Placeholder for the question text.
+<div class="option_list">: Placeholder for the options list.
+<footer>: Contains the total question count and a button to navigate to the next question.
 Result Box:
 - <div class="icon">: Displays an icon (a crown in this case) to represent completion.
 - <div class="complete_text">: Displays a completion message.
 - <div class="score_text">: Placeholder for displaying the user's score.
 - <div class="buttons">: Contains buttons for replaying or quitting the quiz.
-
+```
 
 
 
