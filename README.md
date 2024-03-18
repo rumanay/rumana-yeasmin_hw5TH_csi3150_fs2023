@@ -129,20 +129,31 @@ Instruction Box
 
 </body>
 ```
+1. **`start_btn` Class:**
+    - This class represents a button that initiates the quiz or starts the process of answering questions.
 
-```
-Quiz Box:
- - <header>: Contains the title of the quiz, timer display, and a time line.
-<section>: Contains the question text and options list.
-<div class="que_text">: Placeholder for the question text.
-<div class="option_list">: Placeholder for the options list.
-<footer>: Contains the total question count and a button to navigate to the next question.
-Result Box:
-- <div class="icon">: Displays an icon (a crown in this case) to represent completion.
-- <div class="complete_text">: Displays a completion message.
-- <div class="score_text">: Placeholder for displaying the user's score.
-- <div class="buttons">: Contains buttons for replaying or quitting the quiz.
-```
+2. **`info_box` Class:**
+    - This class encapsulates information and rules related to answering questions.
+    - It typically contains:
+        - A title describing the purpose or topic of the quiz.
+        - A list of rules specifying guidelines for answering questions.
+        - Buttons for actions like quitting or starting the quiz.
+3. **`quiz_box` Class:**
+    - This class denotes the primary area where users interact with questions and answers during the quiz.
+    - Components within this box usually include:
+        - A title indicating the section or topic of the quiz.
+        - A timer displaying the remaining time for each question.
+        - The question text prompting the user for an answer.
+        - Options for the user to select as answers.
+        - Dynamic statistics indicating the current question number or progress.
+        - A button to proceed to the next question.
+4. **`result_box` Class:**
+    - This class represents the section where the quiz results are displayed.
+    - Contents of this box commonly include:
+        - An icon, often a crown, symbolizing completion.
+        - Text indicating the completion of the quiz.
+        - User score displayed dynamically.
+        - Buttons for restarting the quiz or exiting.
 
 
 
